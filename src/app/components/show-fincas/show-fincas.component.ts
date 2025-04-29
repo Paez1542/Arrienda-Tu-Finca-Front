@@ -59,7 +59,7 @@ export class ShowFincasComponent implements OnInit {
   verDetalles(finca: FincaConFotos) {
     localStorage.setItem('fincaSeleccionada', JSON.stringify(finca));
     console.log('Finca seleccionada:', finca);
-    this.router.navigate(['/detalle-finca']);
+    this.router.navigate(['/detalle-finca-arrendador']);
   }
 
 }

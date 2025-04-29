@@ -28,11 +28,10 @@
         <li>Municipio: {{ municipio.nombre }} </li>
       </ul>
     </div>
-  
-    <!-- Botón Solicitar -->
-    <div class="solicitar">
-      <button (click)="onSubmit()">
+
+    <div *ngIf="mostrarBotonSolicitar" class="solicitar">
+      <button (click)="onSolicitar()">
         Solicitar <span>{{ fincaSeleccionada.valorNoche }} / noche</span>
       </button>
     </div>
-  </div>
+</div>

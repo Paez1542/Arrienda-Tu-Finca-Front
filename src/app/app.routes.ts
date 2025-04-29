@@ -24,5 +24,5 @@ export const routes: Routes = [
     { path: 'create-finca', component: CreateFincaComponent},
     { path: 'create-solicitud', component: CreateSolicitudComponent},
     { path: 'detalle-finca', component: InfoFincaComponent},
-    { path: 'edit-finca', component: EditFincaComponent }
+{ path: 'edit-finca', component: EditFincaComponent }
 ];
