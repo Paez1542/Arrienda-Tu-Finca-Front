@@ -10,6 +10,7 @@ import { ShowfincasadminComponent } from './components/showfincasadmin/showfinca
 import { CreateFincaComponent } from './components/create-finca/create-finca.component';
 import { CreateSolicitudComponent } from './components/create-solicitud/create-solicitud.component';
 import { InfoFincaComponent } from './components/info-finca/info-finca.component';
+import { EditFincaComponent } from './components/edit-finca/edit-finca.component';
 
 export const routes: Routes = [
     { path: '', component: LandingComponent},
@@ -22,5 +23,6 @@ export const routes: Routes = [
     { path: 'showfincasadmin', component: ShowfincasadminComponent },
     { path: 'create-finca', component: CreateFincaComponent},
     { path: 'create-solicitud', component: CreateSolicitudComponent},
-    { path: 'detalle-finca', component: InfoFincaComponent}
+    { path: 'detalle-finca', component: InfoFincaComponent},
+    { path: 'edit-finca', component: EditFincaComponent }
 ];

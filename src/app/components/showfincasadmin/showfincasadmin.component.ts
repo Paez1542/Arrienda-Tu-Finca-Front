@@ -56,8 +56,7 @@ export class ShowfincasadminComponent implements OnInit {
   }
 
   editarFinca(id: number): void {
-    // lógica para redireccionar o abrir modal
-    console.log('Editar finca con id:', id);
+    this.router.navigate(['/edit-finca', id])
   }
 
   verDetalle(id: number): void {

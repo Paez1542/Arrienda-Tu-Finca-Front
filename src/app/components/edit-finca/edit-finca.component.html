@@ -1,0 +1,82 @@
+<div class="finca-container">
+  <h2>Editar Finca</h2>
+
+  <form [formGroup]="editFincaForm" (ngSubmit)="onUpdate()">
+    <div class="form-group">
+      <label for="nombre">Nombre de la finca</label>
+      <input formControlName="nombre" id="nombre" type="text" placeholder="Nombre de la finca" required />
+    </div>
+
+    <div class="form-group">
+      <label for="ingreso">Tipo de ingreso a la finca</label>
+      <input formControlName="ingreso" id="ingreso" type="text" placeholder="Tipo de ingreso" required />
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción de la finca</label>
+      <input formControlName="descripcion" id="descripcion" type="text" placeholder="Descripción de la finca" required />
+    </div>
+
+    <div class="form-group">
+      <label for="habitaciones">Habitaciones</label>
+      <input formControlName="habitaciones" id="habitaciones" type="number" placeholder="Cantidad de habitaciones" required />
+    </div>
+
+    <div class="form-group">
+      <label for="banos">Baños</label>
+      <input formControlName="banos" id="banos" type="number" placeholder="Cantidad de baños" required />
+    </div>
+
+    <div class="form-group">
+      <label for="mascotas">¿Se aceptan mascotas?</label>
+      <select formControlName="mascotas" id="mascotas" required>
+        <option value="" disabled>Seleccione una opción</option>
+        <option [value]="true">Sí</option>
+        <option [value]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="piscina">¿Tiene piscina?</label>
+      <select formControlName="piscina" id="piscina" required>
+        <option value="" disabled>Seleccione una opción</option>
+        <option [value]="true">Sí</option>
+        <option [value]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="asador">¿Tiene asador?</label>
+      <select formControlName="asador" id="asador" required>
+        <option value="" disabled>Seleccione una opción</option>
+        <option [value]="true">Sí</option>
+        <option [value]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor por noche</label>
+      <input formControlName="valor" id="valor" type="number" placeholder="Precio por noche" required />
+    </div>
+
+    <div class="form-group">
+      <label for="departamento">Departamento</label>
+      <select formControlName="departamentoSeleccionado" id="departamento" required>
+        <option value="" disabled>Seleccione una opción</option>
+        <option *ngFor="let dep of departamento" [value]="dep.id">{{ dep.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="municipio">Municipio</label>
+      <select formControlName="municipioSeleccionado" id="municipio" required>
+        <option value="" disabled>Seleccione una opción</option>
+        <option *ngFor="let muni of municipio" [value]="muni.id">{{ muni.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="form-group full-width">
+      <button type="submit">Guardar cambios</button>
+    </div>
+  </form>
+</div>
